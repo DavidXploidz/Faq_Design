@@ -34,12 +34,6 @@ img, picture, svg, video{
 input, textarea, button, select{
     font: inherit;
 }
-/* Utilidades */
-.contenedor{
-    max-width: 120rem;
-    margin: 0 auto;
-    width: 90%;
-}
 /* Faq styles */
 .faq{
     min-height: 100vh;
@@ -53,7 +47,7 @@ input, textarea, button, select{
     width: 100%;
 }
 .faq__body{
-    padding: 1rem;
+    padding: min(1rem, 3rem);
     background-color: var(--White);
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
     width: min(50rem, 90%);
@@ -62,8 +56,49 @@ input, textarea, button, select{
 }
 .faq__title{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     column-gap: .5rem;
     font-size: clamp(2.375rem, 1.9837rem + 1.9565vw, 3.5rem);
     font-weight: bold;
+    color: var(--DarkPurple);
+    margin-bottom: 2rem;
+}
+.faq__ul{
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    display: grid;
+    row-gap: 1.5rem;
+}
+.faq__collapse{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 200ms ease-in-out;
+}
+.faq__collapse > li{
+    color: var(--GrayishPurple);
+    font-weight: 400;
+    overflow: hidden;
+}
+.faq__collapse--visible{
+    grid-template-rows: 1fr;
+}
+.faq__question{
+    font-weight: 600;
+    color: var(--DarkPurple);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.faq__question p{
+    margin-bottom: 0;
+}
+.faq__question-button{
+    background-color: transparent;
+    border: none;
+}
+.faq__question-button:hover{
+    cursor: pointer;
 }
