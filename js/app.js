@@ -51,7 +51,7 @@ const showInfo = () => {
 
         const btn_icon = document.createElement('IMG');
         btn_icon.dataset.id = faq.id;
-        btn_icon.src = "/assets/images/icon-plus.svg";
+        btn_icon.src = "./assets/images/icon-plus.svg";
         btn_icon.alt = "icon plus";
 
         const faq_collapse = document.createElement('UL');
@@ -84,10 +84,10 @@ const listeningChanges = () => {
                 const idRes = question.dataset.id;
                 if(idButton === idRes){
                     if(question.classList.contains('faq__collapse--visible')){
-                        button.children[0].src = "/assets/images/icon-plus.svg";
+                        button.children[0].src = "./assets/images/icon-plus.svg";
                         question.classList.remove('faq__collapse--visible');
                     }else{
-                        button.children[0].src = "/assets/images/icon-minus.svg";
+                        button.children[0].src = "./assets/images/icon-minus.svg";
                         question.classList.add('faq__collapse--visible');
                     }
                 }
