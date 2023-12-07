@@ -26,6 +26,7 @@ body{
     font-size: 16px;
     font-family: 'work', sans-serif;
     min-height: 100vh;
+    background-color: var(--LightPink);
 }
 img, picture, svg, video{
     display: block;
@@ -37,7 +38,7 @@ input, textarea, button, select{
 /* Faq styles */
 .faq{
     height: 100%;
-    background-color: var(--LightPink);
+    background-color: var(--GrayishPurple);
     position: relative;
 }
 .faq__bg{
@@ -54,7 +55,7 @@ input, textarea, button, select{
     }
 }
 .faq__body{
-    padding: 3rem;
+    padding: 2rem;
     background-color: var(--White);
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
     width: min(35rem, 90%);
